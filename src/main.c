@@ -12,14 +12,22 @@ int main(int argc, char *argv[])  //now on set up and planning
     const char *history_file = get_default_history();
 
     CmdStats *stats = load_history(history_file);
-    if (!stats) {
-        fprintf(stderr, "Error loading history\n");
-        return 1;
+    
+    if (load_history(&history, argv[1]) != 0) {
+        fprintf(stderr, "Error loading history file\n");
+        free_history(&history);
+        return EXIT_FAILURE;
     }
 
-    sort_stats(stats);
-    print_stats(stats, 10);
-
-    free_stats(stats);
     return 0;
+}
+
+int load_history(CmdHistory *history, const char *filename)
+{
+    FILE *fp = fopen(filename, "r");
+    
+    if (!fp)
+        return -1;
+    
+    //while 
 }
