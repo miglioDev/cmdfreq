@@ -29,5 +29,19 @@ int load_history(CmdHistory *history, const char *filename)
     if (!fp)
         return -1;
     
-    //while 
+    char buffer[1024];
+
+    while (fgets(buffer, sizeof(buffer), fp)) {
+        sanitize_line(buffer);
+        extract_command(buffer);
+        add_command(history, buffer);
+    }
+
+    fclose(fp);
+    return 0;
+}
+
+void sanitize_line(char *line)
+{
+    //line 
 }
