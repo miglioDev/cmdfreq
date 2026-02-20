@@ -1,0 +1,11 @@
+sudo apt 
+sudo apt upgrade
+sudo
+nano 
+random command
+git clone text.txt.git
+nano text.txt
+mkdir folder
+rm old_folder
+sudo apt update && upgrade -y
+cat text.txt
