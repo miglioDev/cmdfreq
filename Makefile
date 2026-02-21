@@ -1,28 +1,20 @@
-# flags
-CFLAGS = -Wall -Wextra -Werror -std=c11 -O2
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11
 
 TARGET = cmdfreq
-
-# Src
-SRC = main.c history.c
-OBJ = $(SRC:.c=.o)
+SRC = src/main.c src/history.c
+OBJ = src/main.o src/history.o
 
 all: $(TARGET)
 
-# Linking
 $(TARGET): $(OBJ)
 	$(CC) $(OBJ) -o $(TARGET)
 
-# Compilation
-%.o: %.c history.h
-	$(CC) $(CFLAGS) -c $< -o $@
+src/main.o: src/main.c src/history.h
+	$(CC) $(CFLAGS) -c src/main.c -o src/main.o
 
-run: $(TARGET)
-	./$(TARGET) ~/.bash_history
+src/history.o: src/history.c src/history.h
+	$(CC) $(CFLAGS) -c src/history.c -o src/history.o
 
-# Clean build files
 clean:
-	rm -f $(OBJ) $(TARGET)
-
-# Phony targets
-.PHONY: all clean run
+	rm -f src/*.o $(TARGET)
