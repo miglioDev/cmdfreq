@@ -1,14 +1,23 @@
 # cmdfreq
 
-cmdfreq is a small, lightweight CLI tool written in C that analyzes shell
-history files and shows the most frequently used commands.
+A minimal C CLI tool that analyzes a shell history file and shows the most frequently used commands.
 
-🚧 This project is currently under development
+## Build
 
-## Goals
-- Work offline && be lightweight and efficient C
-- Follow a UNIX-style philosophy
-- Shows a well-structured tier list of the most frequently used commands
+make
 
-## Status
-Work in progress.
+## Usage
+
+./cmdfreq <history_file>
+
+Example:
+
+./cmdfreq ~/.bash_history
+./cmdfreq ~/.zsh_history
+
+## Notes
+
+- Groups subcommands (e.g. `git commit` → `git`)
+- Ignores `sudo` prefix
+- No external dependencies
+- Updates and improvements coming soon
