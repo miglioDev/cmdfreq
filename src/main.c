@@ -11,9 +11,8 @@ int main(int argc, char *argv[])
 
     FILE *fp = fopen(argv[1], "r");
     if (fp == NULL) {
-        perror("fopen");
-        return 1;
-    }
+        printf("Error: unable to open file\n");
+        exit(EXIT_FAILURE); }
 
     Entry entries[MAX_COMMANDS];
     int unique_count = 0;

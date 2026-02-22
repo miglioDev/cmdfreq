@@ -34,7 +34,7 @@ void process_history(FILE *fp, Entry entries[], int *unique_count)
     char line[LINE_BUF];
     char cmd[MAX_LEN];
 
-    while (fgets(line, sizeof(line), fp)) {
+    while (fgets(line, sizeof(line), fp) != NULL) {
 
         extract_base_command(line, cmd);
 
@@ -72,7 +72,7 @@ void print_entries(Entry entries[], int count)
     printf("\nRank  Command           Total\n");
     printf("-------------------------------\n");
 
-    for (int i = 0; i < count; i++) {
+    for (int i = 0; i < 10; i++) {
         printf("%-5d %-15s %d\n", i + 1, entries[i].name, entries[i].total);
     }
 }
