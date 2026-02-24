@@ -1,6 +1,6 @@
 # cmdfreq
 
-![GitHub tag](https://img.shields.io/github/v/tag/miglioDev/cmdfreq)
+![Version](https://img.shields.io/badge/version-v1.0.0-blue)
 ![License](https://img.shields.io/github/license/miglioDev/cmdfreq)
 
 A minimal command-line tool written in C that analyzes a shell history file and displays the most frequently used commands
