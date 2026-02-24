@@ -3,7 +3,7 @@
 ![GitHub tag](https://img.shields.io/github/v/tag/miglioDev/cmdfreq)
 ![License](https://img.shields.io/github/license/miglioDev/cmdfreq)
 
-Minimal C CLI tool that analyzes a shell history file and displays the most frequently used base commands.
+A minimal command-line tool written in C that analyzes a shell history file and displays the most frequently used commands
 
 ## Features
 
