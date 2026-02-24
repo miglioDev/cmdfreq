@@ -1,4 +1,10 @@
-*.out
+# Executables and precompiled
 *.exe
+*.out
 a.out
 *.o
+*.gch
+
+# My Debug / test files
+command.txt
+*.txt
