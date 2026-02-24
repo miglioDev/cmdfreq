@@ -69,6 +69,8 @@ void sort_entries(Entry entries[], int count)
 
 void print_entries(Entry entries[], int count)
 {
+    (void)count; 
+    
     printf("\nRank  Command           Total\n");
     printf("-------------------------------\n");
 
